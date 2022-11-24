@@ -14,12 +14,12 @@ const incrementCounter = (label, cn) => {
 
 const disableControls = (t, fn) => {
   t.disabled = true;
-  contentContainer.removeEventListener('ckick', fn);
+  contentContainer.removeEventListener('click', fn);
 };
 
 const enableControls = (t, fn) => {
   t.disabled = false;
-  contentContainer.addEventListener('ckick', fn);
+  contentContainer.addEventListener('click', fn);
 };
 
 const getMockData = (t) => +t.parentElement
@@ -31,7 +31,7 @@ const getPrice = (t, price) => Math.round((price + getMockData(t)) * 100) / 100;
 
 const btnClickHandler = (e) => {
   const target = e.target;
-  const interval = 2000;
+  const interval = 3000;
   let restoreHTML = null;
 
   if (typeof target !== 'object') return;
